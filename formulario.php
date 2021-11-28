@@ -21,9 +21,9 @@
         $telefone = $_POST['telefone'];
         $casa = $_POST['casa'];
         $data_entrega = $_POST['data_entrega'];
-        $caixa = $_POST['caixa'];
+        $tipo_encomenda = $_POST['tipo_encomenda'];
 
-        $result = mysqli_query($conexao, "INSERT INTO encomendas(nome, casa, telefone, tipo_encomenda, data_entrega, loja) VALUES('$nome', '$loja', '$telefone', '$casa', '$data_entrega', '$caixa')");
+        $result = mysqli_query($conexao, "INSERT INTO encomendas(nome, loja, telefone, casa, data_entrega, tipo_encomenda) VALUES('$nome', '$loja', '$telefone', '$casa', '$data_entrega', '$tipo_encomenda')");
     }
 
 ?>
@@ -132,8 +132,8 @@
                 </div>
                 <p>Tipo encomenda:</p>
               
-                <input type="radio" id="caixa" name="caixa" value="caixa" required>
-                <label for="caixa">Caixa</label>
+                <input type="radio" id="tipo_encomenda" name="tipo_encomenda" value="caixa" required>
+                <label for="tipo_encomenda">Caixa</label>
                 <br>
              
                 <br><br>
